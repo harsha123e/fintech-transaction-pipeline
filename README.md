@@ -1,10 +1,10 @@
-# 💳 Fintech Transaction Data Pipeline
+# Fintech Transaction Data Pipeline
 
 An end-to-end batch data engineering project built with **PySpark and Delta Lake** to simulate how fintech transaction data can be ingested, cleaned, validated, deduplicated, and transformed into analytical datasets.
 
 The project is implemented in two environments: **Google Colab and Databricks**.
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 - **Languages:** Python, SQL
 - **Data Processing:** PySpark, Apache Spark
@@ -12,7 +12,7 @@ The project is implemented in two environments: **Google Colab and Databricks**.
 - **Libraries:** Pandas, NumPy
 - **Platforms:** Google Colab, Databricks
 
-## 🏗️ Pipeline Architecture
+## Pipeline Architecture
 
 The pipeline follows the Medallion Architecture, separating raw data, cleaned records, and aggregated outputs.
 
@@ -39,7 +39,7 @@ Synthetic Transaction Data
 Daily Transaction Summary
 ```
 
-## ⚙️ What the Pipeline Does
+## What the Pipeline Does
 
 1. **Data Generation:** Creates 100,000 synthetic fintech transactions and introduces data quality issues.
 2. **Bronze Layer:** Ingests and stores the incoming transaction records in Delta format.
@@ -50,7 +50,7 @@ Daily Transaction Summary
 7. **Gold Layer:** Generates daily transaction summaries grouped by date, currency, and status.
 8. **Reconciliation:** Compares aggregate amounts between Silver and Gold to verify data consistency.
 
-## 📊 Pipeline Results
+## Pipeline Results
 
 | Metric | Result |
 |---|---:|
@@ -61,7 +61,7 @@ Daily Transaction Summary
 | Final Silver records | 100,000 |
 | Gold summary records | 360 |
 
-## ✅ Validation Results
+## Validation Results
 
 - No duplicate transaction IDs in the Silver layer.
 - No invalid records in the final Silver dataset.
@@ -71,7 +71,7 @@ Daily Transaction Summary
 
 *Note: Reconciliation verifies aggregate amount preservation; it does not perform currency conversion.*
 
-## 📓 Project Notebooks
+## Project Notebooks
 
 Explore the implementation in either environment:
 
